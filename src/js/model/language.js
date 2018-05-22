@@ -23,7 +23,7 @@ class Language {
     }
 
     forget(sentence) {
-        commands(this) = commands(this).filter((c) => c.id !== id(sentence));
+        commands(this).set(this, commands(this).filter((c) => c.id !== id(sentence)));
         return this;
     }
 
